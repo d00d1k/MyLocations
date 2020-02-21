@@ -37,6 +37,16 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         configureGetButton()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TagLocation" {
+            let navigationController = segue.destination as! UINavigationController
+            let controller = navigationController.topViewController as! LocationDetailsViewController
+            
+            controller.coordinate = location!.coordinate
+            controller.placemark = placemark
+        }
+    }
+    
     func showLocationServisesDeniedAlert() {
         let alert = UIAlertController(title: "Location servises disabled", message: "Please enable location sevices for this app in Settings", preferredStyle: .alert)
         
@@ -46,6 +56,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         
         present(alert, animated: true, completion: nil)
     }
+    
+    //FIXME: - UPDATELABEL NOT UPDATING
     
     func updateLabels() {
         if let location = location {
@@ -76,6 +88,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             } else {
                 statusMessage = "Tap 'Get My Location' to Start"
             }
+            
+            //FIXME: - placemark != place,mark at first
             
             if let placemark = placemark {
                 addressLabel.text = string(from: placemark)
@@ -177,7 +191,6 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         stopLocationManager()
         configureGetButton()
         updateLabels()
-        configureGetButton()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -194,6 +207,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         }
         
         var distance = CLLocationDistance(DBL_MAX)
+        
         if let location = location {
             distance = newLocation.distance(from: location)
         }
@@ -208,6 +222,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
                 print("*** We're done!")
                 stopLocationManager()
+                updateLabels()
                 configureGetButton()
                 
                 if distance > 0 {
