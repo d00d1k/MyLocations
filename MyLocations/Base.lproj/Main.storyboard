@@ -106,7 +106,7 @@
         <scene sceneID="x4j-Jl-bpB">
             <objects>
                 <tableViewController id="0IT-g5-7WS" customClass="LocationDetailsViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="rEH-q3-Hjz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="rEH-q3-Hjz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -154,6 +154,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SaV-49-fRs" kind="show" identifier="PickCategory" id="c4Q-1i-Wab"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -301,7 +304,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressLabel" destination="Bhs-cZ-O2c" id="2Gp-HM-OBl"/>
-                        <outlet property="categoryLabel" destination="JDF-QS-ttY" id="rTf-uk-0SS"/>
+                        <outlet property="categoryLabel" destination="RLt-Ny-ENz" id="eOE-4C-sQH"/>
                         <outlet property="dateLabel" destination="f3G-Af-b2l" id="Ohj-nw-Due"/>
                         <outlet property="descriptionTextView" destination="uDa-WE-WZF" id="hZI-Lb-NFV"/>
                         <outlet property="latitudeLabel" destination="Bge-Zj-3oU" id="Crq-P3-2dx"/>
@@ -311,6 +314,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agZ-xh-2IO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2688.75" y="-320.07042253521126"/>
+        </scene>
+        <!--Category Picker View Controller-->
+        <scene sceneID="IIY-gR-m0a">
+            <objects>
+                <tableViewController id="SaV-49-fRs" customClass="CategoryPickerViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OLc-3N-b97">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="4vi-bq-yRn" style="IBUITableViewCellStyleDefault" id="CAi-qR-PbO">
+                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CAi-qR-PbO" id="seD-rk-bqU">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4vi-bq-yRn">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yW8-XA-5jl" kind="unwind" unwindAction="categoryPickerDidPickCategory:" id="Sdx-JJ-5wg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SaV-49-fRs" id="dZ6-zd-ReB"/>
+                            <outlet property="delegate" destination="SaV-49-fRs" id="Bgr-ed-1lC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Iza-Ay-teL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aF2-Zy-BIT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="yW8-XA-5jl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3666" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

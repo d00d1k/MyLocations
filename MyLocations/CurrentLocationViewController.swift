@@ -89,7 +89,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
                 statusMessage = "Tap 'Get My Location' to Start"
             }
             
-            //FIXME: - placemark != place,mark at first
+            //FIXME: - placemark != placemark at first
             
             if let placemark = placemark {
                 addressLabel.text = string(from: placemark)
@@ -292,6 +292,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         
         updateLabels()
         configureGetButton()
+        updateLabels()
     }
 }
 
