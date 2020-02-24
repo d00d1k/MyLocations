@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         })
         return container
     }()
-    
+
     func listenForFatalCoreDataNotifications() {
         
         NotificationCenter.default.addObserver(forName: MyManagedObjectContextSaveDidFailNotification,
@@ -70,15 +70,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
+
         let tabBarController = window!.rootViewController as! UITabBarController
+        
         if let tabBarViewControllers = tabBarController.viewControllers {
             let currentLocationViewController = tabBarViewControllers[0] as! CurrentLocationViewController
             currentLocationViewController.managedObjectContext = managedObjectContext
             
+            let navigationController = tabBarViewControllers[1] as! UINavigationController
+            
+            let locationsViewController = navigationController.viewControllers[0] as! LocationsViewController
+            
+            locationsViewController.managedObjectContext = managedObjectContext
+                        
             print("Document directory -> \(applicationDocumentDirectory)")
         }
-
+    
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

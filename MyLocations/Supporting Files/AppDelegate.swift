@@ -12,11 +12,6 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
-    var window: UIWindow?
-    
-    //let sceneDelegate = UIApplication.shared.delegate as? SceneDelegate
-    
-
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         

@@ -31,6 +31,21 @@ class LocationDetailsViewController: UITableViewController
     
     var date = Date()
     
+    //var locationToEdit: Location?
+    var descriptionText = ""
+    
+    var locationToEdit: Location? {
+        didSet {
+            if let location = locationToEdit {
+                descriptionText = location.locationDescription
+                categoryName = location.category
+                date = location.date
+                coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
+                placemark = location.placemark
+            }
+        }
+    }
+    
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -41,7 +56,11 @@ class LocationDetailsViewController: UITableViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        descriptionTextView.text = ""
+        if let location = locationToEdit {
+            title = "Edit Location"
+        }
+        
+        descriptionTextView.text = descriptionText
         categoryLabel.text = categoryName
         
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
@@ -138,12 +157,17 @@ class LocationDetailsViewController: UITableViewController
     
     @IBAction func done() {
         
+        
         let hudView = HudView.hud(inView: navigationController!.view, animated: true)
-        hudView.text = "Tagged"
-        
-        let location = Location(context: managedObjectContext)
-        
-        location.locationDescription = descriptionTextView.text
+
+        let location: Location
+        if let temp = locationToEdit {
+          hudView.text = "Updated"
+          location = temp
+        } else {
+          hudView.text = "Tagged"
+          location = Location(context: managedObjectContext)
+        }
         
         location.locationDescription = descriptionTextView.text
         location.category = categoryName
@@ -153,14 +177,14 @@ class LocationDetailsViewController: UITableViewController
         location.placemark = placemark
         
         do {
-            try managedObjectContext.save()
-            
-            afterDelay(0.6) {
-                self.dismiss(animated: true, completion: nil)
-            }
+          try managedObjectContext.save()
+          
+          afterDelay(0.6) {
+            self.dismiss(animated: true, completion: nil)
+          }
         } catch {
-            fatalCoreDataError(error)
-        } 
+          fatalCoreDataError(error)
+        }
     }
     
     @IBAction func cancel() {

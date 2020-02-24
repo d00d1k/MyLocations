@@ -38,6 +38,15 @@ class CategoryPickerViewController: UITableViewController
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "PickedCategory" {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+          selectedCategoryName = categories[indexPath.row]
+        }
+      }
+    }
     // MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
