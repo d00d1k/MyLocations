@@ -8,10 +8,12 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
     
     lazy var managedObjectContext: NSManagedObjectContext = self.persistenConteiner.viewContext
     
@@ -66,9 +68,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return rootViewController
         }
     }
-    
-    
-    
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         let tabBarController = window!.rootViewController as! UITabBarController
@@ -80,8 +80,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let navigationController = tabBarViewControllers[1] as! UINavigationController
             
             let locationsViewController = navigationController.viewControllers[0] as! LocationsViewController
-            
             locationsViewController.managedObjectContext = managedObjectContext
+            
+            let mapViewController = tabBarViewControllers[2] as! MapViewController
+            mapViewController.managedObjectContext = managedObjectContext
                         
             print("Document directory -> \(applicationDocumentDirectory)")
         }

@@ -8,8 +8,8 @@
 
 import UIKit
 
-class LocationCell: UITableViewCell {
-    
+class LocationCell: UITableViewCell
+{
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     

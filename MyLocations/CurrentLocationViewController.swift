@@ -10,8 +10,8 @@ import UIKit
 import CoreLocation
 import CoreData
 
-class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate {
-    
+class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
+{
     let locationManager = CLLocationManager()
     var location: CLLocation?
     var updatingLocation = false
@@ -25,10 +25,6 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var timer: Timer?
     
     var managedObjectContext: NSManagedObjectContext!
-     
-    //let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    //var managedObjectContext = appDelegate.managedObjectContext
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
@@ -36,7 +32,6 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -303,4 +298,3 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         updateLabels()
     }
 }
-

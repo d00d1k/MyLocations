@@ -30,8 +30,7 @@ class LocationDetailsViewController: UITableViewController
     var managedObjectContext: NSManagedObjectContext!
     
     var date = Date()
-    
-    //var locationToEdit: Location?
+
     var descriptionText = ""
     
     var locationToEdit: Location? {

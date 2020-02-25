@@ -85,8 +85,7 @@ class LocationsViewController: UITableViewController
             controller.managedObjectContext = managedObjectContext
             
             if let indexPath = tableView.indexPath(for: sender! as! UITableViewCell) {
-                
-//                let location = locations[indexPath.row]
+           
                 let location = fetchedResultController.object(at: indexPath)
                 controller.locationToEdit = location
             }
