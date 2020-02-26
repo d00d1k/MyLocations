@@ -133,6 +133,7 @@ extension MapViewController: MKMapViewDelegate {
         guard let annotation = annotation as? Location else { return nil }
         
         let identifier = "Location"
+        
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
         
         if let dequeuedView = annotationView {
@@ -140,6 +141,7 @@ extension MapViewController: MKMapViewDelegate {
             annotationView = dequeuedView
         } else {
             let pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            pinView.tintColor = UIColor(white: 0.0, alpha: 0.5)
  
             pinView.canShowCallout = true
             

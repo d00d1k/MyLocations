@@ -15,92 +15,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moe-gv-sJC">
-                                <rect key="frame" x="16" y="64" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOD-Js-tuS">
-                                <rect key="frame" x="16" y="93" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Latitude goes here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYY-2J-2UQ">
-                                <rect key="frame" x="148" y="64" width="156" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Address goes here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUr-jt-X24">
-                                <rect key="frame" x="16" y="173" width="156" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xId-gw-XlA">
+                                <rect key="frame" x="-4" y="-13" width="324" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moe-gv-sJC">
+                                        <rect key="frame" x="28" y="77" width="68" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOD-Js-tuS">
+                                        <rect key="frame" x="28" y="106" width="82" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Latitude goes here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYY-2J-2UQ">
+                                        <rect key="frame" x="141.5" y="77" width="166.5" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Address goes here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUr-jt-X24">
+                                        <rect key="frame" x="28" y="186" width="156" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Longitude goes here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSa-EV-oVd">
+                                        <rect key="frame" x="127" y="105" width="181" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULs-w0-aOx">
+                                        <rect key="frame" x="123" y="241" width="83" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Tag location"/>
+                                        <connections>
+                                            <segue destination="aw0-rv-SH2" kind="presentation" identifier="TagLocation" id="1AL-vP-nov"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wW5-GI-hBb">
+                                        <rect key="frame" x="109" y="20" width="110" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jds-zn-e3L">
-                                <rect key="frame" x="104.5" y="448" width="112" height="30"/>
+                                <rect key="frame" x="104" y="448" width="112" height="30"/>
                                 <state key="normal" title="Get My Location"/>
                                 <connections>
                                     <action selector="getLocation" destination="9pv-A4-QxB" eventType="touchUpInside" id="vVZ-1H-NG0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Longitude goes here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSa-EV-oVd">
-                                <rect key="frame" x="134" y="92" width="170" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULs-w0-aOx">
-                                <rect key="frame" x="119" y="228" width="83" height="30"/>
-                                <state key="normal" title="Tag location"/>
-                                <connections>
-                                    <segue destination="aw0-rv-SH2" kind="presentation" identifier="TagLocation" id="1AL-vP-nov"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wW5-GI-hBb">
-                                <rect key="frame" x="105" y="7" width="110" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KOD-Js-tuS" firstAttribute="top" secondItem="Moe-gv-sJC" secondAttribute="bottom" constant="8" id="2J8-2J-Itu"/>
-                            <constraint firstItem="ULs-w0-aOx" firstAttribute="centerX" secondItem="jds-zn-e3L" secondAttribute="centerX" id="78I-MM-pjk"/>
-                            <constraint firstItem="KYY-2J-2UQ" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="8XB-Hk-srx"/>
-                            <constraint firstItem="wW5-GI-hBb" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="E9N-Lg-2nh"/>
-                            <constraint firstItem="ULs-w0-aOx" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="119" id="My0-5n-cuT"/>
-                            <constraint firstItem="ULs-w0-aOx" firstAttribute="top" secondItem="vUr-jt-X24" secondAttribute="bottom" constant="34" id="SMS-Sp-bix"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="jds-zn-e3L" secondAttribute="bottom" constant="41" id="T2e-C2-9tY"/>
-                            <constraint firstItem="Moe-gv-sJC" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Taf-78-834"/>
-                            <constraint firstItem="wW5-GI-hBb" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="7" id="aeg-7y-iea"/>
-                            <constraint firstItem="KOD-Js-tuS" firstAttribute="leading" secondItem="vUr-jt-X24" secondAttribute="leading" id="cO9-jX-JLb"/>
-                            <constraint firstItem="Moe-gv-sJC" firstAttribute="leading" secondItem="KOD-Js-tuS" secondAttribute="leading" id="fsE-WG-mg4"/>
-                            <constraint firstItem="TSa-EV-oVd" firstAttribute="top" secondItem="KYY-2J-2UQ" secondAttribute="bottom" constant="7" id="nwD-Ac-Dec"/>
-                            <constraint firstItem="Moe-gv-sJC" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="64" id="pSH-A7-FVl"/>
-                            <constraint firstItem="KYY-2J-2UQ" firstAttribute="trailing" secondItem="TSa-EV-oVd" secondAttribute="trailing" id="pjX-If-XvV"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="ULs-w0-aOx" secondAttribute="trailing" constant="118" id="vIB-XE-f8K"/>
-                            <constraint firstItem="Moe-gv-sJC" firstAttribute="baseline" secondItem="KYY-2J-2UQ" secondAttribute="baseline" id="xwa-kF-L1e"/>
-                            <constraint firstItem="vUr-jt-X24" firstAttribute="top" secondItem="KOD-Js-tuS" secondAttribute="bottom" constant="59" id="yYT-tN-ipu"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="jds-zn-e3L" secondAttribute="bottom" constant="41" id="4sj-pu-RtX"/>
+                            <constraint firstItem="jds-zn-e3L" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Nty-fl-u7R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tag" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Tag" image="Tag" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="addressLabel" destination="vUr-jt-X24" id="mzA-qD-15s"/>
+                        <outlet property="containerView" destination="xId-gw-XlA" id="oRu-no-MXh"/>
                         <outlet property="getButton" destination="jds-zn-e3L" id="c66-U0-ZQf"/>
                         <outlet property="latitudeLabel" destination="KYY-2J-2UQ" id="xQW-UI-0mi"/>
+                        <outlet property="latitudeTextLabel" destination="Moe-gv-sJC" id="BUt-Pa-xdG"/>
                         <outlet property="longitudeLabel" destination="TSa-EV-oVd" id="LlC-1I-Lx7"/>
+                        <outlet property="longitudeTextLabel" destination="KOD-Js-tuS" id="2nN-JN-x6Z"/>
                         <outlet property="messageLabel" destination="wW5-GI-hBb" id="ed3-yM-bUX"/>
                         <outlet property="tagButton" destination="ULs-w0-aOx" id="piJ-TN-tvc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863" y="-805"/>
+            <point key="canvasLocation" x="862.5" y="-805.9859154929577"/>
         </scene>
         <!--Map-->
         <scene sceneID="ru6-PA-w1K">
@@ -119,12 +121,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Map" id="4BG-ds-Vm7">
-                                        <barButtonItem key="leftBarButtonItem" title="Locations" id="N02-d7-uIp">
+                                        <barButtonItem key="leftBarButtonItem" title="Locations" image="Pin" id="N02-d7-uIp">
                                             <connections>
                                                 <action selector="showLocations" destination="jUA-zj-bGA" id="czc-Uw-RsP"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="User" id="RgF-QZ-I5K">
+                                        <barButtonItem key="rightBarButtonItem" title="User" image="User" id="RgF-QZ-I5K">
                                             <connections>
                                                 <action selector="showUser" destination="jUA-zj-bGA" id="cHA-cJ-uF2"/>
                                             </connections>
@@ -139,7 +141,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wm6-cg-L0M"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="LSM-qi-SjX"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map" id="LSM-qi-SjX"/>
                     <connections>
                         <outlet property="mapView" destination="CRA-v0-2kZ" id="kjG-1V-ZsR"/>
                         <segue destination="aw0-rv-SH2" kind="presentation" identifier="EditLocation" id="DDX-0V-4EB"/>
@@ -292,7 +294,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1gW-Xo-ACs">
+                                                <label opaque="NO" multipleTouchEnabled="YES" tag="100" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1gW-Xo-ACs">
                                                     <rect key="frame" x="16" y="12" width="63" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -410,10 +412,10 @@
             </objects>
             <point key="canvasLocation" x="4275" y="0.0"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Tab View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="MyTabViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -429,10 +431,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--My Navigation Controller-->
         <scene sceneID="McN-hC-mV9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aw0-rv-SH2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aw0-rv-SH2" customClass="MyNavigationController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4fm-Ss-emL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
@@ -465,7 +467,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHr-YB-6C0">
                                             <rect key="frame" x="82" y="7" width="238" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -505,8 +507,8 @@
         <!--Locations-->
         <scene sceneID="3DK-LW-hMC">
             <objects>
-                <navigationController id="shj-iF-NWq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Locations" id="nei-6o-CHH"/>
+                <navigationController id="shj-iF-NWq" customClass="MyNavigationController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Locations" image="Locations" selectedImage="Locations" id="nei-6o-CHH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ehX-b4-PRZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -521,9 +523,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="Locations" width="30" height="30"/>
+        <image name="Map" width="30" height="30"/>
+        <image name="Pin" width="24" height="24"/>
+        <image name="Tag" width="30" height="30"/>
+        <image name="User" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ote-tO-ZkD"/>
+        <segue reference="1AL-vP-nov"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
