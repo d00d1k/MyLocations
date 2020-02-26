@@ -222,6 +222,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5z-OZ-EgR">
+                                                    <rect key="frame" x="150" y="5" width="135" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="355-pG-qjI" firstAttribute="centerY" secondItem="xSM-TI-QZr" secondAttribute="centerY" id="JVd-O9-8L5"/>
@@ -350,17 +354,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="355-pG-qjI" id="wCb-1B-Ajp"/>
                         <outlet property="addressLabel" destination="Bhs-cZ-O2c" id="2Gp-HM-OBl"/>
                         <outlet property="categoryLabel" destination="RLt-Ny-ENz" id="eOE-4C-sQH"/>
                         <outlet property="dateLabel" destination="f3G-Af-b2l" id="Ohj-nw-Due"/>
                         <outlet property="descriptionTextView" destination="uDa-WE-WZF" id="hZI-Lb-NFV"/>
+                        <outlet property="imageView" destination="S5z-OZ-EgR" id="vJa-37-uEg"/>
                         <outlet property="latitudeLabel" destination="Bge-Zj-3oU" id="Crq-P3-2dx"/>
                         <outlet property="longitudeLabel" destination="bEw-fW-p4f" id="qko-di-RML"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agZ-xh-2IO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3416" y="0.0"/>
+            <point key="canvasLocation" x="3414.375" y="0.0"/>
         </scene>
         <!--Category Picker View Controller-->
         <scene sceneID="IIY-gR-m0a">
@@ -458,24 +464,29 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHr-YB-6C0">
-                                            <rect key="frame" x="16" y="7" width="288" height="21"/>
+                                            <rect key="frame" x="82" y="7" width="238" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IV-hn-oYg">
-                                            <rect key="frame" x="16" y="29" width="288" height="17"/>
+                                            <rect key="frame" x="82" y="29" width="238" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNn-iY-j74">
+                                            <rect key="frame" x="15" y="2" width="52" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="6IV-hn-oYg" id="4Yv-OB-LE7"/>
                                     <outlet property="descriptionLabel" destination="pHr-YB-6C0" id="FRa-4d-Ndx"/>
+                                    <outlet property="photoImagedView" destination="YNn-iY-j74" id="XfD-rG-Pwh"/>
                                     <segue destination="aw0-rv-SH2" kind="presentation" identifier="EditLocation" id="Ote-tO-ZkD"/>
                                 </connections>
                             </tableViewCell>
@@ -489,7 +500,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhi-mW-YkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="0.0"/>
+            <point key="canvasLocation" x="1721.25" y="0.0"/>
         </scene>
         <!--Locations-->
         <scene sceneID="3DK-LW-hMC">
@@ -513,6 +524,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DDX-0V-4EB"/>
+        <segue reference="Ote-tO-ZkD"/>
     </inferredMetricsTieBreakers>
 </document>
